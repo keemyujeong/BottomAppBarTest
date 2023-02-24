@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".42"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".58"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".90"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="#FFFF0000"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="#FF00FF00"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="#FF0000FF"/>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:fabAlignmentMode="center"
+            app:fabAnimationMode="slide"
+            app:hideOnScroll="true"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <!--
+            <com.example.bottomappbartest.CustomBNV
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00FFFFFF"
+                app:elevation="0dp"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/bnv_menu"/>-->
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00FFFFFF"
+                app:elevation="0dp"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/bnv_menu"/>
+
+
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+            <!-- Background
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+
+                    android:drawableTop="@drawable/baseline_airplanemode_active_24"
+                    android:text="비행기 모드"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/baseline_add_comment_24"
+                    android:text="채팅"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/baseline_adb_24"
+                    android:text="디버깅"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/baseline_accessibility_24"
+                    android:text="접근"/>
+
+
+
+
+            </LinearLayout>
+            -->
+
+
+        <!--    hideOnScroll 하면 위로올리면 floating빼고 앱바가 사라짐    -->
+        <!--    bottomappbar는 기본으로 floatingactionbutton이랑 짝짝꿍임. 앱바 안에서 플로팅 버튼 속성있음->fab-->
+        <!--    floatingbutton 라운드진거 얼만큼 띄울거냐 조정가능, 라운드 정도조절도 가능  -->
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/bab"
+            app:layout_constraintRight_toRightOf="@+id/guideLine2"
+            android:src="@drawable/baseline_shopping_cart_24"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--    콘텐츠 영역인데 스크롤이 가능한 영역 NestedScrollView, RecyclerView -->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

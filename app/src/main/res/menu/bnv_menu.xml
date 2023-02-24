@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/aaa"
+        android:enabled="true"
+        android:icon="@drawable/baseline_accessibility_24"
+        android:title="접근"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/bbb"
+        android:enabled="true"
+        android:icon="@drawable/baseline_adb_24"
+        android:title="디버깅"
+        app:showAsAction="always"
+
+        />
+
+    <item
+        android:id="@+id/ccc"
+        android:title=""
+        />
+
+    <item
+        android:id="@+id/ddd"
+        android:enabled="true"
+        android:icon="@drawable/baseline_add_comment_24"
+        android:title="채팅"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/eee"
+        android:enabled="true"
+        android:icon="@drawable/baseline_airplanemode_active_24"
+        android:title="비행기 모드"
+        app:showAsAction="always"
+        />
+
+
+</menu>
